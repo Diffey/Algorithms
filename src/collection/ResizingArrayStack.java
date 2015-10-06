@@ -41,19 +41,19 @@ public class ResizingArrayStack<T> implements Iterable<T>{
 
 	public Iterator<T> iterator() {
 		// TODO Auto-generated method stub
-		return null;
+		return new ReverseArrayIterator();
 	}
 	
 	class ReverseArrayIterator implements Iterator<T>{
-
+		private int i = N;
 		public boolean hasNext() {
 			// TODO Auto-generated method stub
-			return false;
+			return i > 0;
 		}
 
 		public T next() {
 			// TODO Auto-generated method stub
-			return null;
+			return a[--i];
 		}
 
 		public void remove() {

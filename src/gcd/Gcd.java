@@ -10,8 +10,6 @@ public class Gcd {
 		System.out.println(gcd(2,2));
 		System.out.println(gcd(3,4));
 		System.out.println(gcd(4,2));
-		
-		System.out.println(3%4);
 	}
 	
 	/**

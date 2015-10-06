@@ -30,9 +30,9 @@ public class FixedCapacityStack<T> {
 	 * @param item
 	 */
 	public void push(T item){
-		if(N == a.length){
-			resize(2 * a.length);
-		}
+//		if(N == a.length){
+//			resize(2 * a.length);
+//		}
 		a[N++] = item;
 	}
 	
@@ -42,18 +42,19 @@ public class FixedCapacityStack<T> {
 	 */
 	public T pop(){
 		T item = a[--N];
-		if(N > 0 && N == a.length/4){
-			resize(a.length/2);
-		}
+		a[N] = null;
+//		if(N > 0 && N == a.length/4){
+//			resize(a.length/2);
+//		}
 		return item;
 	}
 	
-	private void resize(int max){
+/*	private void resize(int max){
 		T [] temp = (T[]) new Object[max];
 		for(int i=0;i<N;i++){
 			temp[i] = a[i];
 		}
 		a = temp;
-	}
+	}*/
 
 }
