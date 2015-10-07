@@ -1,7 +1,6 @@
 package collection;
 
 import java.util.Iterator;
-import java.util.function.Consumer;
 
 public class ResizingArrayStack<T> implements Iterable<T>{
 	private T[] a = (T[])new Object[1];
